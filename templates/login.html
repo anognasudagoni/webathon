@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Selection</title>
+    <style>
+       
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+  
+    </style>
+</head>
+<body>
+    <h1>Select Location</h1>
+  
+    <div id="map"></div>
+    <form action="/predict" method="post" id="locationForm" >
+        <label for="depth">depth: </label>
+        <input type="text" id="depth" name="depth"><br>
+        <label for="salinity">salinity: </label>
+        <input type="text" id="salinity" name="salinity"><br>
+        <label for="latitude">Latitude: </label>
+        <input type="text" id="latitude" name="latitude"><br>
+        <label for="longitude">Longitude: </label>
+        <input type="text" id="longitude" name="longitude"><br>
+        
+        <button type="submit" >Submit</button>
+    </form>
+    <h2>{{pred}}</h2>
+  
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCypUPF-_O0LBYjlPR7DZFb0-4rS_eBGEY&loading=async&callback=initMap">
+</script>
+   <script>
+        
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0, lng: 0},
+                zoom: 8
+            });
+
+            google.maps.event.addListener(map, 'click', function(event) {
+                document.getElementById('latitude').value = event.latLng.lat();
+                document.getElementById('longitude').value = event.latLng.lng();
+            });
+        }
+
+    </script>
+</body>
+</html>

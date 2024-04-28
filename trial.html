@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viewport Dimensions Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #dimensions {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="dimensions"></div>
+
+<script>
+// Function to update viewport dimensions
+function updateDimensions() {
+    var dimensionsElement = document.getElementById('dimensions');
+    dimensionsElement.textContent = 'Viewport width: ' + window.innerWidth + 'px, height: ' + window.innerHeight + 'px';
+}
+
+// Initial update
+updateDimensions();
+
+// Add event listener for window resize event
+window.addEventListener('resize', updateDimensions);
+</script>
+
+</body>
+</html>

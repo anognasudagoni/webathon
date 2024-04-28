@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceanographic Data Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.5;
+        }
+        .demo-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.demo-bg {
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.demo-content {
+  position: relative;
+}
+    </style>
+</head>
+<body >
+    <div class="demo-wrap">
+        <img
+          class="demo-bg"
+          src="https://imgs.search.brave.com/8lL2N5tOvCxzw7kqITIo0gM-MzGwx1TGoTVFeP3HQfw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDk2/MjAxNzc0L3Bob3Rv/L2Zpc2hpbmctYmFj/a2dyb3VuZC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9Q0w2/d0g2Rm1SdklqSmUx/SUlzS2U1Ym5YVEFh/WDg0TjhzS0YzSk5U/azN4ND0"
+          alt=""
+        >
+        <div class="demo-content">
+        
+      
+    <header>
+        <h1>Oceanographic Data Website</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('login')}}">Generate report</a>
+        <a href="{{ url_for('result') }}">Result</a>
+        <a href="{{ url_for('collection') }}">Collection spots</a>
+       
+    </nav>
+    <div class="container">
+        <h2>Welcome to Our Website</h2>
+        Explore the Ocean, Wisely.
+Discover essential safety tips and tools to maximize your fishing experience while protecting our marine environment.
+        <p>Ocean Safety First
+            Knowing the risks and preparing adequately ensures a safe and enjoyable day on the water.
+            
+            Always check weather conditions before heading out.
+            Wear a life jacket at all times.
+            Be aware of rip currents and water hazards.
+            Inform someone about your planned route and estimated return time.</p>
+        <h3>About Fishing</h3>
+        Photosynthesis fuels marine food webs, yet differences in fish catch across globally distributed marine ecosystems far exceed differences in net primary production (NPP). We consider the hypothesis that ecosystem-level variations in pelagic and benthic energy flows from phytoplankton to fish, trophic transfer efficiencies, and fishing effort can quantitatively reconcile this contrast in an energetically consistent manner. To test this hypothesis, we enlist global fish catch data that include previously neglected contributions from small-scale fisheries, a synthesis of global fishing effort, and plankton food web energy flux estimates from a prototype high-resolution global earth system model (ESM). After removing a small number of lightly fished ecosystems, stark interregional differences in fish catch per unit area can be explained (r = 0.79) with an energy-based model that (i) considers dynamic interregional differences in benthic and pelagic energy pathways connecting phytoplankton and fish, (ii) depresses trophic transfer efficiencies in the tropics and, less critically, (iii) associates elevated trophic transfer efficiencies with benthic-predominant systems. Model catch estimates are generally within a factor of 2 of values spanning two orders of magnitude. Climate change projections show that the same macroecological patterns explaining dramatic regional catch differences in the contemporary ocean amplify catch trends, producing changes that may exceed 50% in some regions by the end of the 21st century under high-emissions scenarios. Models failing to resolve these trophodynamic patterns may significantly underestimate regional fisheries catch trends and hinder adaptation to climate change.
+    </div>
+</div>
+</div>
+</body>
+</html>
